@@ -24,9 +24,6 @@ export namespace ComponentNS {
 }
 
 class GiphyEmbed extends LitElement implements GiphyEmbedProps {
-  giphyId: string
-  count: number
-
   static get properties() {
     return {
       postid: String,
@@ -34,9 +31,15 @@ class GiphyEmbed extends LitElement implements GiphyEmbedProps {
     }
   }
 
+  giphyId: string
+  count: number
+  postid: string
+  root: any
+  onKick: (e: Event) => void
+  gifimg: HTMLElement
+
   constructor() {
     super()
-    this.timesRendered = 0
   }
 
   __eventsApi(e: Event) {
@@ -56,7 +59,7 @@ class GiphyEmbed extends LitElement implements GiphyEmbedProps {
     }
   }
 
-  __setRoot(root: object) {
+  __setRoot(root: ShadowRoot | null) {
     this.root = root
   }
 
@@ -65,10 +68,10 @@ class GiphyEmbed extends LitElement implements GiphyEmbedProps {
   }
 
   __initRender() {
-    //Set component root
+    // Set component root
     this.__setRoot(this.shadowRoot)
 
-    //Attach Custom Event Dispatchers
+    // Attach Custom Event Dispatchers
     this.onKick = (e: Event) => this.__eventsApi(e).kick()
     this.gifimg = this.root.querySelector('img')
     this.gifimg.addEventListener('click', this.onKick)
@@ -87,8 +90,6 @@ class GiphyEmbed extends LitElement implements GiphyEmbedProps {
   }
 
   _render({ postid, count }: ComponentAPI) {
-    this.timesRendered++
-    console.log(`Com Rendered ${this.timesRendered} times`)
     this.giphyId = postid
     this.count = count
 

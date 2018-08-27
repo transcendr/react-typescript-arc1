@@ -4,6 +4,15 @@ import {
   RequestHandlerOptions,
 } from '../util/api'
 
+// import { Dictionary } from '@cerebral/fluent'
+
+// type Item = {
+//   count: number
+// }
+// type State = {
+//   items: Dictionary<Item>
+// }
+
 export function increment({ state }: any) {
   state.set('count', state.get('count') + 1)
 }
@@ -19,7 +28,6 @@ export function reset({ state }: any) {
 export function testapi({ state }: any) {
   const options: RequestHandlerOptions = {
     url: 'https://demo0433378.mockable.io/test',
-    stuff: 'hey',
   }
   request(options).then((val: RequestHandlerResponse) => {
     if (val.status) {

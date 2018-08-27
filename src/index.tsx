@@ -13,7 +13,7 @@ const styles = {}
 
 const App = () => (
   <div style={styles}>
-    <Hello name="A" />
+    <Hello />
     <World />
   </div>
 )
