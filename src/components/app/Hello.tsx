@@ -34,8 +34,11 @@ interface HelloState {
 
 class Hello extends React.Component<HelloProps, HelloState> implements IHello {
   static propTypes = {
-    // name: PropTypes.string.isRequired,
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    // name: PropTypes.string,
+    // count: PropTypes.number,
+    // incremented: PropTypes.func,
+    // testapi: PropTypes.func,
   }
 
   ge = (React as any).createRef()
@@ -57,7 +60,7 @@ class Hello extends React.Component<HelloProps, HelloState> implements IHello {
     node.addEventListener('kick', (e: CustomEvent) => {
       // console.log(e.detail.kicked) // true
       node.setAttribute('postid', 'l4FGqDtRMMjOKdFGU')
-      this.props.incremented()
+      // this.props.incremented()
       this.props.testapi()
     })
   }

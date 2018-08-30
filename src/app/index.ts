@@ -1,6 +1,7 @@
 import { Module } from 'cerebral'
 import * as sequences from './sequences'
-// window.testapi = sequences.testapi()
+import { routes } from './routes'
+
 interface InitialState {
   count: number
   gettest: object
@@ -18,6 +19,9 @@ interface Signals {
 interface ControllerModule {
   state: InitialState
   signals: Signals
+  modules: {
+    router: typeof routes
+  }
   // providers: Providers
   // modules: Modules
 }
@@ -32,6 +36,9 @@ const controllerModule: ControllerModule = {
     decremented: sequences.decrement,
     reset: sequences.reset,
     testapi: sequences.testapi,
+  },
+  modules: {
+    router: routes,
   },
   // providers: {},
   // modules: {},

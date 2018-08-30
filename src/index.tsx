@@ -5,16 +5,22 @@ import './components/web/@native-shim'
 import controller from './controller'
 import { Container } from '@cerebral/react'
 
-import Hello from './components/app/Hello'
-import World from './components/app/World'
+import Login from './views/Login'
 
 import './style.css'
 const styles = {}
 
+declare global {
+  namespace JSX {
+    interface IntrinsicAttributes {
+      [elemName: string]: any
+    }
+  }
+}
+
 const App = () => (
   <div style={styles}>
-    <Hello />
-    <World />
+    <Login />
   </div>
 )
 

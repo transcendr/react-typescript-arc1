@@ -27,5 +27,9 @@
     "src/setupTests.ts",
     "src/components/web/@native-shim.ts",
     "src/registerServiceWorker.ts"
-  ]
+  ],
+  // "files": [
+  //   "src/**/*",
+  //   "node_modules/@types/react/index.d.ts"
+  // ]
 }

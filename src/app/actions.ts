@@ -4,15 +4,6 @@ import {
   RequestHandlerOptions,
 } from '../util/api'
 
-// import { Dictionary } from '@cerebral/fluent'
-
-// type Item = {
-//   count: number
-// }
-// type State = {
-//   items: Dictionary<Item>
-// }
-
 export function increment({ state }: any) {
   state.set('count', state.get('count') + 1)
 }

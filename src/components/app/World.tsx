@@ -51,7 +51,7 @@ class World extends React.Component<WorldProps, WorldState> implements IWorld {
         </style>
         <hr />
         <h1>App Component B</h1>
-        <p>You've made ${this.props.count} by clicking!</p>
+        <p>You've made ${this.props.count} by clicking gifs!</p>
         <p>
           API Request returned msg:{' '}
           <code>
