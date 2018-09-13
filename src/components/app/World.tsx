@@ -37,11 +37,10 @@ class World extends React.Component<WorldProps, WorldState> implements IWorld {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.props.testapi()
-    }, 3000)
-    console.log('COUNT', this.props.count)
-    console.log('GETTEST', this.props.gettest)
+    //Example API call on component mount
+    // setTimeout(() => {
+    //   this.props.testapi()
+    // }, 3000)
   }
 
   render() {
@@ -55,7 +54,9 @@ class World extends React.Component<WorldProps, WorldState> implements IWorld {
         <p>You've made ${this.props.count} by clicking!</p>
         <p>
           API Request returned msg:{' '}
-          <code>{this.props.gettest.msg || 'Retrieving Response'}</code>
+          <code>
+            {this.props.gettest.msg || 'Click Component A Image to Load'}
+          </code>
         </p>
       </div>
     )

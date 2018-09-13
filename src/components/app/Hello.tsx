@@ -24,6 +24,7 @@ interface HelloProps {
   count: number
   incremented: () => void
   decremented: () => void
+  testapi: () => any
 }
 
 interface HelloState {
@@ -55,6 +56,7 @@ class Hello extends React.Component<HelloProps, HelloState> implements IHello {
       // console.log(e.detail.kicked) // true
       node.setAttribute('postid', 'l4FGqDtRMMjOKdFGU')
       this.props.incremented()
+      this.props.testapi()
     })
   }
 
@@ -92,6 +94,7 @@ export default connect(
     count: state`count`,
     incremented: signal`incremented`,
     decremented: signal`decremented`,
+    testapi: signal`testapi`,
   },
   Hello
 )

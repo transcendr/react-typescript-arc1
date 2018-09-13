@@ -3,10 +3,7 @@
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es2015",
-    "lib": [
-      "es2015",
-      "dom"
-    ],
+    "lib": ["es2015", "dom"],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
@@ -15,11 +12,10 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "allowSyntheticDefaultImports": false
+    "noUnusedLocals": true
   },
   "exclude": [
     "node_modules",
@@ -28,8 +24,6 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts",
-    "src/components/web/@native-shim.ts",
-    "src/registerServiceWorker.ts"
+    "src/setupTests.ts"
   ]
 }

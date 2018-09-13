@@ -1,5 +1,5 @@
 {
-  "name": "react-fiber-typescript",
+  "name": "firebase-chat",
   "version": "0.1.0",
   "private": true,
   "main": "src/index.tsx",
@@ -8,7 +8,9 @@
     "@cerebral/router": "3.2.2",
     "@cerebral/storage": "4.2.2",
     "@polymer/lit-element": "0.5.2",
+    "@types/react": "16.4.12",
     "cerebral": "4.2.2",
+    "lit-html": "0.11.2",
     "prop-types": "15.6.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

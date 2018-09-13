@@ -7,6 +7,7 @@ import { Container } from '@cerebral/react'
 
 import Hello from './components/app/Hello'
 import World from './components/app/World'
+import FirebaseChat from './components/app/FirebaseChat'
 
 import './style.css'
 const styles = {}
@@ -15,6 +16,7 @@ const App = () => (
   <div style={styles}>
     <Hello name="A" />
     <World />
+    <FirebaseChat />
   </div>
 )
 
@@ -24,5 +26,3 @@ render(
   </Container>,
   document.querySelector('#root')
 )
-
-// render(<App />, document.getElementById('root'))
